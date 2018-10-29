@@ -1,3 +1,8 @@
+<?php 
+include "includes/parentUsers.inc.php";
+include "includes/newClass.inc.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +12,27 @@
     <title>Document</title>
 </head>
 <body>
+    <?php 
     
+
+    echo "First object <br>";
+    $users = new Users;
+    echo $users->userName;
+    $users->setNewName("Larisa"); 
+    echo $users->getName() . "<br>";
+
+    
+    echo "<br>Second object <br>";
+    $buyers = new Users;
+    unset($buyers);
+    echo $buyers->userName;
+    $buyers->setNewName("Lavinia");
+    echo "<br>" . $buyers->getName() . "<br>";
+
+    echo "Construct test <br>";
+    $customers = new Users;
+
+    
+    ?>
 </body>
 </html>
